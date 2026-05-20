@@ -23,7 +23,7 @@ Configure the OpenZiti controller, metrics bridge, and zrok controller to collec
     ```
 
     Adjust `events/jsonLogger/handler/path` to wherever you want to send these events for ingestion into zrok. Consult
-    the [OpenZiti docs](@openzitidocs/learn/introduction) for additional options that control file rotation.
+    the [OpenZiti docs](@openzitidocs/intro) for additional options that control file rotation.
 
 2. Add the following to the `network` stanza of the OpenZiti controller configuration to increase the reporting
    frequency. By default, the OpenZiti events infrastructure reports and batches events in 1-minute buckets—too large an
