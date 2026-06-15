@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # Reserved names and namespaces
 
-:::info v2.0 feature
+:::info[v2.0 feature]
 This page describes the v2.0 namespace and name system. If you're migrating from v1.x, see the [v2 migration
 guide](/how-tos/migration/migrate-v1-to-v2.md) for details on how this replaces the old `zrok reserve` workflow.
 :::

@@ -31,7 +31,7 @@ zrok limits can be specified *globally*, applying to all users in a service inst
 provide additional levels of resource allocation. Limit classes can then be *applied* to multiple accounts, to alter
 their limit allocation beyond what's configured in the global configuration.
 
-:::note v2.0 terminology
+:::note[v2.0 terminology]
 In zrok v2.0, the namespace and name system replaced the v1.x reserved share workflow:
 
 - `reserved_shares` now refers to reserved names created with `zrok2 create name -n <namespace> <name>`

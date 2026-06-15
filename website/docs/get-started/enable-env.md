@@ -56,7 +56,7 @@ Environment:
 
 Both `Account Token` and `EnvZId` should show `<<SET>>`. Your environment is ready.
 
-:::note Self-hosted API endpoint
+:::note[Self-hosted API endpoint]
 If you're using a self-hosted zrok instance, configure your API endpoint before enabling:
 
 ```bash
