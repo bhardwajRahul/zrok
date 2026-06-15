@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 This guide walks through deploying a self-hosted zrok2 instance on a single Linux server, running the controller,
 frontend, and metrics bridge. This is the simplest production-ready configuration.
 
-:::info Single-host deployment
+:::info[Single-host deployment]
 To scale the frontend for higher throughput or availability, see
 [Scaling frontends](@zrokdocs/self-hosting/frontends/scaling-frontends).
 :::
@@ -164,7 +164,7 @@ sudo -u postgres psql -c "CREATE USER zrok2 WITH PASSWORD '<your-db-password>';"
 sudo -u postgres psql -c "CREATE DATABASE zrok2 OWNER zrok2;"
 ```
 
-:::tip SQLite3 alternative
+:::tip[SQLite3 alternative]
 For single-controller deployments, you can use SQLite3 instead of PostgreSQL. Replace the `store` section in `ctrl.yml`
 with:
 
@@ -414,7 +414,7 @@ shares would work with polling.
     sudo systemctl restart zrok2-controller
     ```
 
-:::note Why is this needed?
+:::note[Why is this needed?]
 When a user creates a named share (`zrok2 share public --name-selection public:myapp ...`), the controller publishes a
 mapping update to the `dynamicProxy` AMQP exchange. The frontend subscribes to this exchange and immediately starts
 routing `myapp.zrok.example.com` to the share's backend with no polling delay. The `dynamicProxyController` Ziti service

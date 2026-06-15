@@ -8,7 +8,7 @@ This guide walks through deploying a self-hosted zrok2 instance using Docker Com
 as the [Deploy zrok on Linux](@zrokdocs/self-hosting/deployment/linux): OpenZiti overlay, zrok2 controller, frontend,
 and PostgreSQL, using official container images with runtime configuration via environment variables.
 
-:::info Single-host deployment
+:::info[Single-host deployment]
 This compose stack runs one frontend instance. For higher throughput or availability, run multiple frontend instances
 behind a reverse proxy (e.g., Caddy or Traefik). See [Scaling frontends](@zrokdocs/self-hosting/frontends/scaling-frontends) for
 details.
@@ -25,7 +25,7 @@ details.
   - **443**: HTTPS for the zrok2 controller and frontend via Caddy (recommended for production)
   - **18080 and 8080**: zrok2 controller and frontend (local testing only, no TLS)
 
-:::tip Use Caddy for TLS
+:::tip[Use Caddy for TLS]
 Use the [Caddy TLS overlay](#optional-enable-tls-with-caddy) for production deployments. Caddy terminates TLS for the
 zrok2 controller API and the wildcard share frontend on port 443, routing by subdomain. This avoids exposing the
 insecure ports 18080 (controller) and 8080 (frontend) directly to the internet.

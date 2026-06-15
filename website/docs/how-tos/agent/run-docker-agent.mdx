@@ -73,7 +73,7 @@ Docker host and mount it into the container.
           - ${HOME}/.zrok2:/mnt/.zrok2
     ```
 
-    :::warning Set the container user
+    :::warning[Set the container user]
     The `user: "${UID:-1000}"` directive sets the container's effective UID to match your Docker host user. This is
     required so the container can read and write to the bind-mounted `~/.zrok2` directory. If your UID is not 1000,
     set `UID` in your shell or `.env` file.
@@ -99,7 +99,7 @@ Docker host and mount it into the container.
     docker compose exec zrok-agent zrok2 share public http://host.docker.internal:8080 -n public:myapp
     ```
 
-    :::tip host.docker.internal
+    :::tip[host.docker.internal]
     To share a service running on the Docker host, use `host.docker.internal` as the hostname. On Linux, you may
     also need `--network=host` on the container or add `extra_hosts: ["host.docker.internal:host-gateway"]` to the
     compose service.
